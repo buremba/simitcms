@@ -1,0 +1,27 @@
+.column{
+	width:75%;
+	min-height:300px;
+
+}
+.column .blogset{
+	position:relative;
+}
+.column .blogset h2{
+	margin:0;
+	cursor:move;
+}
+.blogset-content{
+	min-height:100px; margin:5px;
+}
+.column  .placeholder{
+	background: #000;
+	border:1px dashed #ddd;
+}
+.blogset h2.collapse{
+	background:#DFA200 url('collapse.png') no-repeat top right;
+	-moz-border-radius:5px;
+}
+.blogset h2 .configure{
+	font-size:11px; font-weight:normal;
+	margin-right:30px; float:right;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+
+<body>
+<div id="container">
+
+
+<textarea id="codepress2" class="codepress html linenumbers" style="width:700px;height:200px;" wrap="off">
+//set language
+this.setLanguage = function() {
+	if(arguments[0]) {
+		language = (typeof(Content.languages[arguments[0]])!='undefined') ? arguments[0] : this.setLanguage();
+		cpLanguage.innerHTML = Content.languages[language].name;
+		if(cpBody.document.designMode=='on') cpBody.document.designMode = 'off';
+		CodePress.loadScript(cpBody.document, '../languages/'+language+'.js', function () { cpBody.CodePress.syntaxHighlight('init'); })
+		cpBody.document.getElementById('cp-lang-style').href = '../languages/'+language+'.css';
+		this.hideMenu();
+	}
+	else {
+		var extension = filename.replace(/.*\.([^\.]+)$/,'$1');
+		var aux = false;
+		for(lang in Content.languages) {
+			extensions = ','+Content.languages[lang].extensions+',';
+			if(extensions.match(','+extension+',')) aux = lang;
+		}
+		language = (aux) ? aux : 'generic';
+	}
+}
+</textarea>
+
+<p>
+	<button class="actions" onclick="alert(codepress2.getCode())">get code from editor</button>
+	<button class="actions" onclick="codepress2.toggleEditor()">turn on/off CodePress</button>
+	<button class="actions" onclick="codepress2.toggleLineNumbers()">show/hide line numbers</button>
+	<button class="actions" onclick="codepress2.toggleAutoComplete()">turn on/off auto-complete</button>
+	<button class="actions" onclick="codepress2.toggleReadOnly()">turn on/off read only</button>
+</p>
+
+
+
+<script src="codepress.js" type="text/javascript"></script>
+</body>
+</html>
