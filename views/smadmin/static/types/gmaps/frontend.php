@@ -1,0 +1,1 @@
+<iframe width='425' height='350' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='http://maps.google.com/?ll<?php echo $content[0] ?>,<?php echo $content[1] ?>=&amp;t=h&amp;z=9&amp;output=embed'></iframe>
