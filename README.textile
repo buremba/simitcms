@@ -1,3 +1,5 @@
+*Please note that it's an alpha version only intended for testing!*
+
 it's a flexible cms module for kohana.
 
 h2. Plugins
