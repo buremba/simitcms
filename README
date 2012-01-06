@@ -1,0 +1,8 @@
+it's a flexible cms module for kohana.
+
+Plugins:
+	- Static Areas (supports many types such as gmaps, youtube, and keyvalue)
+	- Crud (using Readbean ORM)
+	- Media (with ajax upload)
+	- Dashboard
+	- Dynamic i18n (add/edit/delete languages, edit/delete expressions)
